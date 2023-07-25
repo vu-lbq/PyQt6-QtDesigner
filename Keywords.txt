@@ -1,0 +1,4 @@
+QApplication - holds Event Loop
+QWidget
+QMainWindow - pre-made widget which provides a lot of standard window features
+
