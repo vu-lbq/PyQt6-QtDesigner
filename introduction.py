@@ -9,7 +9,7 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6.QtWidgets import (QApplication, QWidget, QPushButton, QTextEdit, QComboBox, QFileDialog,
                             QHBoxLayout, QVBoxLayout)
-
+import os
 
 class Ui_mainWindow(object):
     def setupUi(self, mainWindow):
@@ -48,6 +48,7 @@ class Ui_mainWindow(object):
         self.lineEdit01 = QtWidgets.QLineEdit(parent=self.groupBox)
         self.lineEdit01.setGeometry(QtCore.QRect(110, 20, 541, 20))
         self.lineEdit01.setObjectName("lineEdit01")
+        # browse file 01
         self.browseButton01 = QtWidgets.QPushButton(parent=self.groupBox)
         self.browseButton01.setGeometry(QtCore.QRect(670, 20, 75, 23))
         self.browseButton01.setObjectName("browseButton01")
@@ -129,16 +130,16 @@ class Ui_mainWindow(object):
         self.actionAbout.setText(_translate("mainWindow", "About"))
         self.actionHelp_F1.setText(_translate("mainWindow", "Help (F1)"))
 
-    def getFileName(self):
+    def getFileName01(self):
         file_filter = 'IFC File (*.ifc)'
         response = QFileDialog.getOpenFileName(
             parent=self,
             caption='Select a file',
             directory=os.getcwd(),
             filter=file_filter,
-            initialFilter='Excel File (*.xlsx *.xls)'
+            initialFilter='IFC File (*.ifc)'
         )
-        self.textbox.setText(str(response))
+        self.lineEdit01.setText(str(response))
 
 
 if __name__ == "__main__":
