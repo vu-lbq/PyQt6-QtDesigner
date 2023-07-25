@@ -7,12 +7,14 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
+from PyQt6.QtWidgets import (QApplication, QWidget, QPushButton, QTextEdit, QComboBox, QFileDialog,
+                            QHBoxLayout, QVBoxLayout)
 
 
 class Ui_mainWindow(object):
     def setupUi(self, mainWindow):
         mainWindow.setObjectName("mainWindow")
-        mainWindow.resize(799, 600)
+        mainWindow.resize(816, 318)
         self.centralwidget = QtWidgets.QWidget(parent=mainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayoutWidget = QtWidgets.QWidget(parent=self.centralwidget)
@@ -24,14 +26,63 @@ class Ui_mainWindow(object):
         self.gridLayout.setSpacing(0)
         self.gridLayout.setObjectName("gridLayout")
         self.label01 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label01.setGeometry(QtCore.QRect(30, 20, 47, 13))
+        self.label01.setGeometry(QtCore.QRect(-10, 10, 811, 41))
+        font = QtGui.QFont()
+        font.setFamily("Verdana")
+        font.setPointSize(14)
+        self.label01.setFont(font)
+        self.label01.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
+        self.label01.setScaledContents(False)
+        self.label01.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label01.setIndent(0)
         self.label01.setObjectName("label01")
+        self.groupBox = QtWidgets.QGroupBox(parent=self.centralwidget)
+        self.groupBox.setGeometry(QtCore.QRect(20, 50, 771, 91))
+        font = QtGui.QFont()
+        font.setFamily("Verdana")
+        self.groupBox.setFont(font)
+        self.groupBox.setObjectName("groupBox")
+        self.label = QtWidgets.QLabel(parent=self.groupBox)
+        self.label.setGeometry(QtCore.QRect(10, 20, 91, 16))
+        self.label.setObjectName("label")
+        self.lineEdit01 = QtWidgets.QLineEdit(parent=self.groupBox)
+        self.lineEdit01.setGeometry(QtCore.QRect(110, 20, 541, 20))
+        self.lineEdit01.setObjectName("lineEdit01")
+        self.browseButton01 = QtWidgets.QPushButton(parent=self.groupBox)
+        self.browseButton01.setGeometry(QtCore.QRect(670, 20, 75, 23))
+        self.browseButton01.setObjectName("browseButton01")
+        self.label_2 = QtWidgets.QLabel(parent=self.groupBox)
+        self.label_2.setGeometry(QtCore.QRect(10, 50, 91, 16))
+        self.label_2.setObjectName("label_2")
+        self.lineEdit02 = QtWidgets.QLineEdit(parent=self.groupBox)
+        self.lineEdit02.setGeometry(QtCore.QRect(110, 50, 541, 20))
+        self.lineEdit02.setObjectName("lineEdit02")
+        self.browseButton02 = QtWidgets.QPushButton(parent=self.groupBox)
+        self.browseButton02.setGeometry(QtCore.QRect(670, 50, 75, 23))
+        self.browseButton02.setObjectName("browseButton02")
+        self.groupBox_2 = QtWidgets.QGroupBox(parent=self.centralwidget)
+        self.groupBox_2.setGeometry(QtCore.QRect(20, 160, 771, 81))
+        self.groupBox_2.setObjectName("groupBox_2")
+        self.label_3 = QtWidgets.QLabel(parent=self.groupBox_2)
+        self.label_3.setGeometry(QtCore.QRect(10, 30, 91, 16))
+        self.label_3.setObjectName("label_3")
+        self.lineEdit03 = QtWidgets.QLineEdit(parent=self.groupBox_2)
+        self.lineEdit03.setGeometry(QtCore.QRect(110, 30, 541, 20))
+        self.lineEdit03.setObjectName("lineEdit03")
+        self.saveButton03 = QtWidgets.QPushButton(parent=self.groupBox_2)
+        self.saveButton03.setGeometry(QtCore.QRect(670, 30, 75, 23))
+        self.saveButton03.setObjectName("saveButton03")
+        self.applyButton = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.applyButton.setGeometry(QtCore.QRect(690, 240, 75, 23))
+        self.applyButton.setObjectName("applyButton")
         mainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=mainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 799, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 816, 21))
         self.menubar.setObjectName("menubar")
         self.menuFile = QtWidgets.QMenu(parent=self.menubar)
         self.menuFile.setObjectName("menuFile")
+        self.menuHelp = QtWidgets.QMenu(parent=self.menubar)
+        self.menuHelp.setObjectName("menuHelp")
         mainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=mainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -42,10 +93,17 @@ class Ui_mainWindow(object):
         self.actionClose_Project.setObjectName("actionClose_Project")
         self.actionExit = QtGui.QAction(parent=mainWindow)
         self.actionExit.setObjectName("actionExit")
+        self.actionAbout = QtGui.QAction(parent=mainWindow)
+        self.actionAbout.setObjectName("actionAbout")
+        self.actionHelp_F1 = QtGui.QAction(parent=mainWindow)
+        self.actionHelp_F1.setObjectName("actionHelp_F1")
         self.menuFile.addAction(self.actionNew_Project)
         self.menuFile.addSeparator()
         self.menuFile.addAction(self.actionExit)
+        self.menuHelp.addAction(self.actionAbout)
+        self.menuHelp.addAction(self.actionHelp_F1)
         self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
 
         self.retranslateUi(mainWindow)
         QtCore.QMetaObject.connectSlotsByName(mainWindow)
@@ -53,11 +111,34 @@ class Ui_mainWindow(object):
     def retranslateUi(self, mainWindow):
         _translate = QtCore.QCoreApplication.translate
         mainWindow.setWindowTitle(_translate("mainWindow", "Merge IFC models"))
-        self.label01.setText(_translate("mainWindow", "TextLabel"))
+        self.label01.setText(_translate("mainWindow", "Merge Two IFC Models"))
+        self.groupBox.setTitle(_translate("mainWindow", "IFC Models For Merging"))
+        self.label.setText(_translate("mainWindow", "First model:"))
+        self.browseButton01.setText(_translate("mainWindow", "Browse"))
+        self.label_2.setText(_translate("mainWindow", "Second model:"))
+        self.browseButton02.setText(_translate("mainWindow", "Browse"))
+        self.groupBox_2.setTitle(_translate("mainWindow", "Output"))
+        self.label_3.setText(_translate("mainWindow", "Merged IFC model:"))
+        self.saveButton03.setText(_translate("mainWindow", "Browse"))
+        self.applyButton.setText(_translate("mainWindow", "Apply"))
         self.menuFile.setTitle(_translate("mainWindow", "File"))
+        self.menuHelp.setTitle(_translate("mainWindow", "Help"))
         self.actionNew_Project.setText(_translate("mainWindow", "New Project"))
         self.actionClose_Project.setText(_translate("mainWindow", "Close Project"))
         self.actionExit.setText(_translate("mainWindow", "Exit"))
+        self.actionAbout.setText(_translate("mainWindow", "About"))
+        self.actionHelp_F1.setText(_translate("mainWindow", "Help (F1)"))
+
+    def getFileName(self):
+        file_filter = 'IFC File (*.ifc)'
+        response = QFileDialog.getOpenFileName(
+            parent=self,
+            caption='Select a file',
+            directory=os.getcwd(),
+            filter=file_filter,
+            initialFilter='Excel File (*.xlsx *.xls)'
+        )
+        self.textbox.setText(str(response))
 
 
 if __name__ == "__main__":
