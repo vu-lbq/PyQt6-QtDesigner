@@ -7,3 +7,8 @@ QSize
 Signals - notification emitted by widgets when something happens
 Slots - receiver of signals - any functions (or method) can be a slot 
 - simply by connecting the signal to it
+
+widget - is the name given to a component of the UI that the user can interact with. 
+User interfaces are made up of multiple widgets, arranged within the window.
+
+alignmentflag 
