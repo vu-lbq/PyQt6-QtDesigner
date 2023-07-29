@@ -1,4 +1,5 @@
 # import os here to work with files, directory, folder...
+# os.path common pathname manipulations
 import os
 import sys
 
