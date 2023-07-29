@@ -3,6 +3,7 @@ QWidget
 QMainWindow - pre-made widget which provides a lot of standard window features
 Subclass - MainWindow
 QSize
+Qpixmap - an off-screen image representation that can be used as a paint device
 
 Signals - notification emitted by widgets when something happens
 Slots - receiver of signals - any functions (or method) can be a slot 
@@ -11,4 +12,5 @@ Slots - receiver of signals - any functions (or method) can be a slot
 widget - is the name given to a component of the UI that the user can interact with. 
 User interfaces are made up of multiple widgets, arranged within the window.
 
-alignmentflag 
+alignmentflag
+ 

@@ -15,12 +15,13 @@ class MainWindow(QMainWindow):
         # assign font setting to label
         widget.setFont(font)
         # set alignment for the label
-        # alignmentflag 
+        # alignmentflag - set label to be center of vertical and horizontal
         widget.setAlignment(
         Qt.AlignmentFlag.AlignHCenter
         | Qt.AlignmentFlag.AlignVCenter
         ) 
         self.setCentralWidget(widget)
+        
 app = QApplication(sys.argv)
 window = MainWindow()
 window.show()
