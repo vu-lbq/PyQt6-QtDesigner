@@ -14,4 +14,7 @@ widget - is the name given to a component of the UI that the user can interact w
 User interfaces are made up of multiple widgets, arranged within the window.
 
 alignmentflag
- 
+
+#QLabel
+#QCheckBox
+#QComboBox
