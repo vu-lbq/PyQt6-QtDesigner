@@ -13,6 +13,13 @@ class MainWindow(QMainWindow):
         widget = QComboBox()
         # add three value in order for selecting
         widget.addItems(["One", "Two", "Three"])
+        # set the combobox elements to editable - mean can add items
+        # enter when finish edited
+        widget.setEditable(True)
+        # set insert policy
+        widget.setInsertPolicy(QComboBox.InsertPolicy.InsertAlphabetically)
+        # set limite of items allowed in combobox
+        widget.setMaxCount(5)
         # hook to method index_changed() when index is changed in combobox
         # note that index start from 0
         widget.currentIndexChanged.connect(self.index_changed)
