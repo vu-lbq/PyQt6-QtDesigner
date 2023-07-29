@@ -21,7 +21,8 @@ class MainWindow(QMainWindow):
         widget.stateChanged.connect(self.show_state)
 
         self.setCentralWidget(widget)
-
+        
+    # a slot method to show the state of checkbox
     def show_state(self, s):
         print(Qt.CheckState(s) == Qt.CheckState.Checked)
         print(s)
