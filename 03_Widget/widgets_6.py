@@ -13,9 +13,11 @@ class MainWindow(QMainWindow):
         widget = QLineEdit()
         # set maximum length for the line edit
         widget.setMaxLength(10)
-        # set the place holdẻ text
+        # set the place holder text
         widget.setPlaceholderText("Enter your text")
-        
+        # apply input validation using an input mask
+        widget.setInputMask('000.0000.000;_')
+
         # widget.setReadOnly(True) # uncomment this to make readonly
         
         # hooked return pressed with the function
