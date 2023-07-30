@@ -18,28 +18,32 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         self.setWindowTitle("My App")
-        # create horizontal layout for layout 1, vertical layout for layout 2,3 
+        # create Box Horizontal layout to layout 1, vertical layout to layout 2,3
         layout1 = QHBoxLayout()
         layout2 = QVBoxLayout()
         layout3 = QVBoxLayout()
-        # add 3 widgets color to layout 2
-        layout2.addWidget(Color("red"))
+        # set margins to content
+        layout1.setContentsMargins(5, 5, 5, 5)
+        # set spacing for layout 1s
+        layout1.setSpacing(10)
+        # add color widgets to layout 2 
+        layout2.addWidget(Color("blue"))
+        layout2.addWidget(Color("green"))
         layout2.addWidget(Color("yellow"))
+        layout2.addWidget(Color("orange"))
+        layout2.addWidget(Color("red"))
+        layout2.addWidget(Color("pink"))
         layout2.addWidget(Color("purple"))
         # add layout 2 to layout 1
         layout1.addLayout(layout2)
         # add green widget to layout 1
-        layout1.addWidget(Color("green"))
-        # add red and purple widget to layout 3
-        layout3.addWidget(Color("red"))
-        layout3.addWidget(Color("purple"))
+        layout1.addWidget(Color("white"))
+        # add red and purple widgets to layout 3
+        layout3.addWidget(Color("black"))
+        layout3.addWidget(Color("pink"))
         # add layout 3 to layout 1
         layout1.addLayout(layout3)
-        # set margin to content of layout 1
-        layout1.setContentsMargins(10,10,10,10)
-        # spacing between widget/layout for layout inside layout 1
-        layout1.setSpacing(5)
-        # create dummy widget and add to layout 1
+
         widget = QWidget()
         widget.setLayout(layout1)
         self.setCentralWidget(widget)
