@@ -26,3 +26,5 @@ alignmentflag
 
 #QVBoxLayout
 #QHBoxLayout
+#QGridLayout
+#QStackedlayout
