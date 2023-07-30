@@ -23,3 +23,6 @@ alignmentflag
 #QSpinBox
 #QSlider
 #QDial
+
+#QVBoxLayout
+#QHBoxLayout
