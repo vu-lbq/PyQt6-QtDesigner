@@ -1,4 +1,4 @@
 #ignore all source samples
 pyqt6-source/
 # ignore __pycatche__
-**/__pycatche__
+**/__pycache__
