@@ -11,7 +11,8 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         self.setWindowTitle("My App")
-        # fill the background color for empty widget as red
+        # fill thecolor for empty widget as red
+        # create a dummy widget with background color as red
         widget = Color("red")   
         self.setCentralWidget(widget)
 
