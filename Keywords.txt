@@ -18,3 +18,8 @@ alignmentflag
 #QLabel
 #QCheckBox
 #QComboBox
+#QListWidget
+#QLineEdit
+#QSpinBox
+#QSlider
+#QDial
