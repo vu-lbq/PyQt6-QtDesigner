@@ -34,3 +34,6 @@ alignmentflag
 #QAction -  is a class that provides a way to describe abstract user interfaces.
 you can define multiple interface elements within a single object, 
 unified by the effect that interacting with that element has.
+# menuBar
+
+#QDialog
