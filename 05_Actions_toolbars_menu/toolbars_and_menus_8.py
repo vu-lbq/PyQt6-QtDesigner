@@ -14,6 +14,7 @@ from PyQt6.QtWidgets import (
 
 basedir = os.path.dirname(__file__)
 
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -56,15 +57,12 @@ class MainWindow(QMainWindow):
 
         self.setStatusBar(QStatusBar(self))
 
-        # Create menubar
         menu = self.menuBar()
-        # Add menu item to menubar
+
         file_menu = menu.addMenu("&File")
-        help_menu = menu.addMenu("&Help")
-        # reuse the button action above - with this way, button can be located both in menu and toolbar
         file_menu.addAction(button_action)
-        # this one is custom to check - not in source
-        help_menu.addAction(button_action2)
+        file_menu.addSeparator()
+        file_menu.addAction(button_action2)
 
     def onMyToolBarButtonClick(self, s):
         print("click", s)
