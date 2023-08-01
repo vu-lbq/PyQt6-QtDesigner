@@ -39,3 +39,6 @@ unified by the effect that interacting with that element has.
 #QDialog
 #CustomDialog
 #DialogButtonBox
+#QMessageBox
+#QMessageBox.StandardButton
+#QMessageBox.question
