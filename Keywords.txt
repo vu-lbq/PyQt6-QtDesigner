@@ -43,3 +43,4 @@ unified by the effect that interacting with that element has.
 #QMessageBox.StandardButton
 #QMessageBox.question
 #QInputDialog
+#QFileDialog
