@@ -46,7 +46,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(container)
 
     def get_filename(self):
-        initial_filter = FILE_FILTERS[3]  # Select one from the list. - default value is index 3
+        initial_filter = FILE_FILTERS[3]  # Select one from the list.
         filters = ";;".join(FILE_FILTERS)
         print("Filters are:", filters)
         print("Initial filter:", initial_filter)
